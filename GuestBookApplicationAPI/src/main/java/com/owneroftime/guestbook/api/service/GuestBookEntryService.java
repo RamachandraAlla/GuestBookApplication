@@ -4,6 +4,12 @@ import com.owneroftime.guestbook.api.model.GuestBookEntryModel;
 
 import java.util.List;
 
+/**
+ * 
+ * @author Ram
+ * This is the Guest Book Entry Service Interface which is having all the functions
+ *
+ */
 public interface GuestBookEntryService {
 
     void createGuestBookEntry(GuestBookEntryModel guestBookEntryModel);

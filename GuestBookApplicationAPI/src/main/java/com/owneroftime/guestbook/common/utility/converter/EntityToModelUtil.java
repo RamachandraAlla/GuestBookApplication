@@ -6,6 +6,12 @@ import com.owneroftime.guestbook.common.utility.date.DateTimeUtil;
 import com.owneroftime.guestbook.security.entity.UserEntity;
 import com.owneroftime.guestbook.security.model.UserModel;
 
+/**
+ * 
+ * @author Ram
+ * Convert this Util Class from Entity to Model Object
+ *
+ */
 public class EntityToModelUtil {
 
     private EntityToModelUtil() {}

@@ -1,5 +1,12 @@
 package com.owneroftime.guestbook.security.model;
 
+
+/**
+ * 
+ * @author Ram
+ * User Model Object which is having name, username,id,name, role,email and password
+ *
+ */
 public class UserModel {
     private Long id;
     private String email;

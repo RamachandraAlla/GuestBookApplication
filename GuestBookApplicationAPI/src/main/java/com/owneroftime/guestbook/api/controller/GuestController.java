@@ -18,6 +18,13 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
+
+/**
+ * 
+ * @author Ram
+ * This Guest Book Controller to Handle All the Guest Entry Requests
+ *
+ */
 @RestController
 @RequestMapping("/guest")
 public class GuestController {

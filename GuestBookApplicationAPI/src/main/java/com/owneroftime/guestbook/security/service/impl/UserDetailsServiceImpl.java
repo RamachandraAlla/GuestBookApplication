@@ -18,6 +18,13 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 
+
+/**
+ * 
+ * @author Ram
+ * User Service Implementation which is handles the all the User details Operations
+ *
+ */
 @Service(value = SecurityConstants.BEAN_USER_DETAILS_SERVICE_IMPL)
 @Transactional(rollbackOn = {Exception.class})
 public class UserDetailsServiceImpl implements UserDetailsService, UserService {

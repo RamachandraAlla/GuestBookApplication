@@ -5,6 +5,12 @@ import com.owneroftime.guestbook.api.model.GuestBookEntryModel;
 import com.owneroftime.guestbook.security.entity.UserEntity;
 import com.owneroftime.guestbook.security.model.UserModel;
 
+/**
+ * 
+ * @author Ram
+ * Convert this Util Class from Model to Entity Object
+ *
+ */
 public class ModelToEntityUtil {
 
     private ModelToEntityUtil() {}

@@ -20,6 +20,12 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+/**
+ * 
+ * @author Ram
+ * Handles the Security Configuration functiona like Access/ Denied
+ *
+ */
 @Configuration
 @EnableWebSecurity
 @EnableWebMvc

@@ -1,5 +1,12 @@
 package com.owneroftime.guestbook.security.model;
 
+
+/**
+ * 
+ * @author Ram
+ * Login Model Object which is having email and password
+ *
+ */
 public class LoginModel {
 	
     private String email;

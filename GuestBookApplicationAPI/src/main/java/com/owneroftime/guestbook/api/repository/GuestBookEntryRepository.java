@@ -7,6 +7,12 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * 
+ * @author Ram
+ * This is the Guest Book Entry Repository Class which is having List of All Guest Book Entry Objects
+ *
+ */
 @Repository
 public interface GuestBookEntryRepository extends JpaRepository<GuestBookEntryEntity, Long> {
 	

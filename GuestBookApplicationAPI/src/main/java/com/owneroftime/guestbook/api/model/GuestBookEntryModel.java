@@ -1,5 +1,12 @@
 package com.owneroftime.guestbook.api.model;
 
+
+/**
+ * 
+ * @author Ram
+ * This is Entry Model Object which consists of Guest Book Entry Id, Text, Image, Captured By and Status.
+ *
+ */
 public class GuestBookEntryModel extends BaseModel {
 	
     private Long guestBookEntryId;

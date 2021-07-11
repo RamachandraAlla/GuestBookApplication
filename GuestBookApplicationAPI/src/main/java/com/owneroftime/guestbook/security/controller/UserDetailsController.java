@@ -23,6 +23,12 @@ import com.owneroftime.guestbook.security.model.LoginModel;
 import com.owneroftime.guestbook.security.model.UserModel;
 import com.owneroftime.guestbook.security.service.UserService;
 
+/**
+ * 
+ * @author Ram
+ * This is the User Details Controller class which is handle all User Details Requests
+ *
+ */
 @RestController
 @RequestMapping("/security/userDetails")
 public class UserDetailsController {

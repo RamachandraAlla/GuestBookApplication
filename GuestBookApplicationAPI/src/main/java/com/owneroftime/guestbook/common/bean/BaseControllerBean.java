@@ -6,6 +6,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * @author Ram
+ * This is Base Controller Bean which is having error message, infomessage and payload details.
+ *
+ */
 @JsonPropertyOrder({"status", "payload", "infoMessages", "errorMessages"})
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class BaseControllerBean {

@@ -18,6 +18,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * 
+ * @author Ram
+ * Implementation of Guest Book Entry Service functions.
+ *
+ */
 @Service
 @Transactional(rollbackFor = {Exception.class})
 public class GuestBookEntryServiceImpl implements GuestBookEntryService{

@@ -7,6 +7,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * 
+ * @author Ram
+ * User Entity Object which is having name, email, password and role
+ *
+ */
 @Entity
 @Table(name = "USER")
 public class UserEntity {

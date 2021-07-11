@@ -13,6 +13,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+/**
+ * 
+ * @author Ram
+ * Entity Object for Guest Book Entry
+ *
+ */
 @Entity
 @Table(name = "GUEST_BOOK_ENTRY")
 public class GuestBookEntryEntity extends BaseEntity {

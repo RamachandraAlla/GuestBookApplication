@@ -6,6 +6,12 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import java.time.LocalDateTime;
 
+/**
+ * 
+ * @author Ram
+ * Base Entity is having all common Fields values
+ *
+ */
 @MappedSuperclass
 public class BaseEntity {
 	

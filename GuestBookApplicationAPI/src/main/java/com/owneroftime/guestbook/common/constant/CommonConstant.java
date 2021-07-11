@@ -1,5 +1,11 @@
 package com.owneroftime.guestbook.common.constant;
 
+/**
+ * 
+ * @author Ram
+ * which is having all the constant values.
+ *
+ */
 public class CommonConstant {
     private CommonConstant() {}
 

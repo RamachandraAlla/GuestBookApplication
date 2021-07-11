@@ -5,6 +5,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+/**
+ * 
+ * @author Ram
+ * User Detail Repository which is handled the user details related operations
+ *
+ */
 @Repository
 public interface UserDetailsRepository extends JpaRepository<UserEntity, Long> {
 

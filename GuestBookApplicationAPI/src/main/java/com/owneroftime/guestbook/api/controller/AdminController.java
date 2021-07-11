@@ -15,6 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+
+/**
+ * 
+ * @author Ram
+ * This is the Admin Controller to hanlde all the admin related requests
+ *
+ */
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
