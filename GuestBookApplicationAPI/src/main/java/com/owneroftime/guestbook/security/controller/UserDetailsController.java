@@ -33,7 +33,7 @@ import com.owneroftime.guestbook.security.service.UserService;
 @RequestMapping("/security/userDetails")
 public class UserDetailsController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(UserDetailsController.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserDetailsController.class);
 
     @Autowired
     private UserService userService;
@@ -48,6 +48,7 @@ public class UserDetailsController {
     @PostMapping("/register")
     public ResponseEntity<BaseControllerBean> register(@RequestBody UserModel userModel) {
         baseControllerBean = new BaseControllerBean();
+        logger.debug("start register....");
         try {
             baseControllerBean.setPayloads(userService.createUser(userModel));
             baseControllerBean.setSuccess(true);
@@ -57,6 +58,7 @@ public class UserDetailsController {
             baseControllerBean.getErrorMessages().add("FailedTo Register User");
             baseControllerBean.getErrorMessages().add(exception.getMessage());
         }
+        logger.debug("end register....");
         return new ResponseEntity<>(baseControllerBean, HttpStatus.OK);
     }
 
@@ -68,6 +70,7 @@ public class UserDetailsController {
     @PostMapping("/getUserDetails")
     public ResponseEntity<BaseControllerBean> getUserDetails(@RequestBody String emailID) {
         baseControllerBean = new BaseControllerBean();
+        logger.debug("start getUserDetails....");
         try {
             baseControllerBean.setPayloads(userService.getUserDetailsByEmail(emailID));
             baseControllerBean.setSuccess(true);
@@ -78,6 +81,7 @@ public class UserDetailsController {
             baseControllerBean.getErrorMessages().add(exception.getMessage());
             return new ResponseEntity<>(baseControllerBean, HttpStatus.BAD_REQUEST);
         }
+        logger.debug("End getUserDetails....");
         return new ResponseEntity<>(baseControllerBean, HttpStatus.OK);
     }
 
@@ -91,6 +95,7 @@ public class UserDetailsController {
         baseControllerBean = new BaseControllerBean();
         RestTemplate restTemplate = new RestTemplate();
         HttpEntity<LoginModel> httpEntity = new HttpEntity<>(loginModel);
+        logger.debug("start signin....");
         try {
             ResponseEntity<Object> responseEntity = restTemplate.exchange("http://localhost:8080/login", HttpMethod.POST, httpEntity, Object.class);
             List<String> token = responseEntity.getHeaders().get(SecurityConstants.TOKEN_PREFIX);
@@ -106,6 +111,7 @@ public class UserDetailsController {
                 return new ResponseEntity<>(baseControllerBean, HttpStatus.FORBIDDEN);
             }
         }
+        logger.debug("End signin....");
         return new ResponseEntity<>(baseControllerBean, HttpStatus.OK);
     }
 

@@ -9,6 +9,10 @@
   
   Step 5: If everything went well, APi will start successfully and ready to use.
   
+# Running the API
+Go to project root folder and enter the given command
+mvn spring-boot:run
+  
 # Running test cases
 Go to project root folder where test  classes are present and run command 'mvn -Dtest=GuestBookApiApplicationTests test'
 

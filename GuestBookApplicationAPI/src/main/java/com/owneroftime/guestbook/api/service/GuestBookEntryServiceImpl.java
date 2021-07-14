@@ -1,6 +1,7 @@
 package com.owneroftime.guestbook.api.service;
 
 import com.owneroftime.guestbook.api.entity.GuestBookEntryEntity;
+
 import com.owneroftime.guestbook.api.model.GuestBookEntryModel;
 import com.owneroftime.guestbook.api.repository.GuestBookEntryRepository;
 import com.owneroftime.guestbook.common.utility.GuestBookSecurityContextHolder;
@@ -51,7 +52,7 @@ public class GuestBookEntryServiceImpl implements GuestBookEntryService{
             UserEntity userEntity = userDetailsRepository.loadUserByUsername(guestBookEntryModel.getCapturedBy());
             guestBookEntryEntity.setUserEntity(userEntity);
         }
-        guestBookEntryEntity.setGuestBookEntryStatus(1L);
+        guestBookEntryEntity.setGuestBookEntryStatus(true);
         guestBookEntryRepository.save(guestBookEntryEntity);
     }
 
@@ -81,7 +82,7 @@ public class GuestBookEntryServiceImpl implements GuestBookEntryService{
             if (null != guestBookEntryId) {
                 Optional<GuestBookEntryEntity> guestBookEntryEntity = guestBookEntryRepository.findById(Long.parseLong(guestBookEntryId));
                 guestBookEntryEntity.ifPresent(entity -> {
-                    entity.setGuestBookEntryStatus(2L);
+                    entity.setGuestBookEntryStatus(false);
                     guestBookEntryRepository.save(entity);
                 });
             }

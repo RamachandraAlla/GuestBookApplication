@@ -6,7 +6,12 @@ import java.io.Serializable;
 @XmlRootElement(name = "ExecutionContext")
 public class ExecutionContext implements Serializable {
 	
-    private Long userId;
+    /**
+	 * serial Version Id
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private Long userId;
     private String userEmail;
 
     public Long getUserId() {

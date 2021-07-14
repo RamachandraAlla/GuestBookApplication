@@ -39,7 +39,7 @@ public class GuestBookEntryEntity extends BaseEntity {
     private UserEntity userEntity;
     
     @Column(name = "GUEST_BOOK_ENTRY_STATUS")
-    private Long guestBookEntryStatus;
+    private boolean guestBookEntryStatus;
 
     public Long getGuestBookEntryId() {
         return guestBookEntryId;
@@ -73,11 +73,11 @@ public class GuestBookEntryEntity extends BaseEntity {
         this.userEntity = userEntity;
     }
 
-    public Long getGuestBookEntryStatus() {
+    public boolean getGuestBookEntryStatus() {
         return guestBookEntryStatus;
     }
 
-    public void setGuestBookEntryStatus(Long guestBookEntryStatus) {
+    public void setGuestBookEntryStatus(boolean guestBookEntryStatus) {
         this.guestBookEntryStatus = guestBookEntryStatus;
     }
 }

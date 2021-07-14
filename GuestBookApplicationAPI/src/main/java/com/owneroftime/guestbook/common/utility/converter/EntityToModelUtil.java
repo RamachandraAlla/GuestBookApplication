@@ -24,7 +24,7 @@ public class EntityToModelUtil {
         if (null != guestBookEntryEntity.getUserEntity()) {
             guestBookEntryModel.setCapturedBy(guestBookEntryEntity.getUserEntity().getEmail());
         }
-        guestBookEntryModel.setStatus(guestBookEntryEntity.getGuestBookEntryStatus() == 1? "Pending": "Approved");
+        guestBookEntryModel.setStatus(guestBookEntryEntity.getGuestBookEntryStatus() == true? "Pending": "Approved");
         guestBookEntryModel.setCreatedBy(guestBookEntryEntity.getCreatedBy());
         guestBookEntryModel.setCreatedOn(DateTimeUtil.convertLocalDateTimeToString(guestBookEntryEntity.getCreatedOn()));
         guestBookEntryModel.setModifiedBy(guestBookEntryEntity.getModifiedBy());
